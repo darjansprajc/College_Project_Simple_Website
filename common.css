@@ -1,0 +1,254 @@
+#openMenu{
+    display: none;
+}
+
+.nav {
+    top: 0;
+    position: sticky;
+    background-color: rgb(69, 64, 64);
+    color: white;
+    padding: 10px;
+    justify-content: space-between;
+    z-index: 1;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.nav #closeMenu{
+    display: none;
+}
+
+.nav #id1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav #id1 a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500; 
+}
+
+
+.nav #id1 a:hover {
+    color: yellow;
+    font-weight: 650;
+}
+
+.nav #id1 li {
+    margin: 0 10px;
+}
+
+#navNastavniPlan{
+    display: none;
+}
+
+.nav #id2{
+    transform: translateX(-500px);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    animation: slide 1s 0.5s ease forwards;
+}
+
+@keyframes slide{
+    0%{}
+    100%{transform: translateX(0) }
+}
+
+.nav #id2 a {
+    text-decoration: none;
+    color: rgb(239, 239, 7);
+}
+
+
+.nav #id2 a:hover {
+    text-decoration: underline;
+}
+
+.nav #id2 li {
+    margin: 0 10px;
+}
+
+.form{
+    display: none;
+    position: fixed;
+    height: 100%;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.37);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    width: 900px;
+    height: auto;
+    border: 3px solid #f1f1f1;
+    border-radius: 1%;
+    z-index: 9;
+    background-color: white;
+    padding: 20px;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.form-box h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding: 5px 5px 15px 5px;
+    font-weight: 550;
+    font-size: 2.2rem;
+    color: darkblue;
+    margin: 0 0 25px 0;
+}
+
+.form-box h1 img{
+    height: 50px;
+    width: 50px;
+}
+
+.form.box h1 i{
+    text-align: center;
+}
+
+.form form input[type=text], 
+.form form input[type=email], 
+.form form select,
+.form form textarea{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px 10px 10px 15px;
+}
+
+.form form input[type=text]:focus,
+.form form input[type=email]:focus,
+.form form select:focus,
+.form form textarea:focus {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 0px 2px 2px rgba(0, 128, 255, 0.362);
+}
+
+.form form select:hover{
+    cursor: pointer;
+}
+
+.form form label{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+#newsLetter{
+    position: relative;
+    padding: 3px;
+}
+#newsLetter input{
+    position: absolute;
+    margin-left: 10px;
+    top: 6px;
+    height: 15px;
+    width: 15px;
+}
+
+#newsLetter input:hover{
+    cursor: pointer;
+}
+
+#submitButton, #cancelButton{
+    margin: 15px 10px 10px 10px;
+    padding: 10px;
+    width: 100px; 
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+}
+
+#submitButton{
+    float: left;
+    background-color: rgba(46, 33, 224, 0.872);
+}
+
+#cancelButton{
+    float: left;
+    background-color: rgba(255, 0, 0, 0.781);
+}
+
+#submitButton:hover, #cancelButton:hover{
+    cursor: pointer
+}
+
+@media(max-width: 960px)
+{
+    .nav{
+        padding: 10px;
+    }
+    .nav #id1 li {
+        margin: 0 5px;
+    }
+    .nav #id2 li {
+        margin: 0 5px;
+    }
+}
+
+@media(max-width: 870px){    
+    #openMenu{
+        display: block;
+        margin: 15px;
+        position: sticky;
+        position: fixed;
+        top:0;
+        right:0;
+        z-index: 999;
+    }
+
+    .nav{
+        display: none;
+        position: fixed;
+        top:0;
+        right:0;
+        height: 100vh;
+        width: 200px;
+        background-color: rgb(69, 64, 64);
+        z-index: 999;
+        flex-direction:column;
+        justify-content: unset;
+        transition: all 0.3s ease;
+    }   
+    .nav #closeMenu{
+        display: contents;
+    }
+
+    .nav #closeMenu::before {
+        margin: 10px 0px 15px 0px;
+    }
+    .nav #id1 {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+    .nav #id1 li {
+        padding: 10px 0px 10px 0px;
+    }
+
+    .nav #id2{
+        flex-direction: column;
+    }
+    .nav #id2 li {
+        padding: 10px 0px 10px 0px;
+    }
+    
+}

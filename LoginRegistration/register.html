@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="logReg.css">
+    <script src="https://kit.fontawesome.com/156e0aa52b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="openMenu"><i onclick = "openMenu()" class="fa-solid fa-bars fa-xl" style="color: rgb(46, 43, 43);"></i></div>
+    <div class="nav">
+        <i id="closeMenu" onclick = "closeMenu()" class="fa-solid fa-x fa-lg" style="color: #ff3d3d;"></i>
+        <ul id="id1">
+                <li id="navPrijaviSe"><a href="login.html"><i class="fa-solid fa-right-to-bracket" style="color:lightblue"></i> Prijavi se</a></li>
+                <li><a href="../index.html"><i class="fa-solid fa-house" style="color:yellow"></i> Početna</a></li>
+                <li><a href="../aboutUs/aboutUs.html"><i class="fa-solid fa-comments" style="color:yellow"></i> O nama</a></li>
+                <li><a href="../news/news.html"><i class="fa-solid fa-circle-info" style="color:yellow"></i> Novosti</a></li>
+                <li id = "navNastavniPlan"><a href="../CoursePlan/coursePlan.html"><i class="fa-solid fa-circle-info" style="color:yellow"></i> Nastavni Plan</a></li>
+                <li><a onclick = "openForm()" style="cursor: pointer;"><i class="fa-solid fa-envelope" style="color:yellow"></i> Kontakt</a></li>
+        </ul>  
+    </div>
+
+    <div class="form" id="myForm">
+        <div class="form-box" >
+            <h1><div><i class="fa-solid fa-envelope"></i> Kontaktirajte nas </div><img src="../SUPIT-projekt-materijali/img/Algebra-logo.png"> </h1>
+            <form action="https://www.fulek.com/mvc/supit/project-contact-form" method = "post"class="form-container">
+
+                <label for="FullName">Puno Ime</label>
+                <input type="text" name="FullName" required>
+            
+                <label for="Email">Email</label>
+                <input type="email" name="Email" required>
+
+                <label for="Importance">Važnost poruke</label> 
+                <select name="Importance" id="importance"> 
+                    <option value="visoka">Visoka</option> 
+                    <option value="niska">Niska</option>
+                </select>
+                
+                <label for="Message">Poruka</label>
+                <textarea id="message" name="Message" rows="10" cols="20"></textarea>
+
+                <label id="newsLetter" for="ReceiveNewsletter">Želim primati obavijesti <input type="checkbox" name="ReceiveNewsletter" value="true"></label>
+                
+                <div class="buttons">
+                    <button id="submitButton" type="submit">Pošalji</button>
+                    <button id="cancelButton"type="button" onclick="closeForm()">Odustani</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   <div class="center-box">
+        <h2>REGISTRACIJA KORISNIKA</h2>
+        <form id="register">
+            <label for="username">Korisničko Ime</label>
+            <input type="text" name="username" id="username" required>
+        
+            <label for="password">Lozinka</label>
+            <input type="password" name="password" id="password" required>
+        
+            <button>Registriraj se</button>
+        </form>  
+        <div id="message"></div>
+   </div> 
+    
+    <div class="footer">
+        <div id="white">BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</div>
+        <div id="zaiskri">ZAISKRI</div>
+    </div> 
+    
+    <script src="../index.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>

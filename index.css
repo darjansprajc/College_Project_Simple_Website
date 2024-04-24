@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.backgroundVideo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.front-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: auto;
+    font-size: 3.5em;
+    color: white;
+    width: 800px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 30px solid white;
+    animation:  typing 2.9s steps(40),
+                cursor .4s step-end infinite alternate,
+                changeWord 2s 3.1s steps(6);
+    
+}
+
+#zaiskri{
+    display: none;
+    color: rgb(128, 0, 68);
+    font-weight: 600;
+    border-right: 30px solid white;
+    text-align: left;
+    width: auto;
+    animation: typing 3s 6s steps(7), cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+    50%{ border-color: transparent}
+}
+@keyframes typing {
+    from{
+        width: 0%;
+    }
+    
+}
+@keyframes changeWord {
+    0% {
+        width: 40%;
+    }
+    60%{
+        width: 30.5%;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+@media(max-width: 1500px){
+    .front-text{
+        font-size: 2.7em;
+        width: 600px;
+        animation:  typing 2.9s steps(40),
+                    cursor .4s step-end infinite alternate,
+                    changeWord2 2s 3.1s steps(6);
+    }
+    @keyframes changeWord2 {
+        0% {
+            width: 600px;
+        }
+        60%{
+            width: 480px;
+        }
+        100% {
+            width: 600px;
+        }
+    }   
+}
+
+@media(max-width: 700px){
+    .front-text{
+        font-size: 2.3em;
+        width: 500px;
+        animation:  typing 2.9s steps(40),
+                    cursor .4s step-end infinite alternate,
+                    changeWord2 2s 3.1s steps(6);
+    }
+    @keyframes changeWord2 {
+        0% {
+            width: 500px;
+        }
+        60%{
+            width: 410px;
+        }
+        100% {
+            width: 500px;
+        }
+    }
+}
+
+@media(max-width: 550px){
+    .front-text{
+        font-size: 2em;
+        width: 430px;
+        animation:  typing 2.9s steps(40),
+                    cursor .4s step-end infinite alternate,
+                    changeWord3 2s 3.1s steps(6);
+    }
+    #zaiskri{
+        border-right: 10px solid white;
+    }
+    @keyframes changeWord3 {
+        0% {
+            width: 430px;
+        }
+        60%{
+            width: 345px;
+        }
+        100% {
+            width: 430px;
+        }
+    }
+}
+
+
+

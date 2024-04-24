@@ -1,0 +1,228 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.h1{
+    transform: translateY(100px);
+    font-size: 2.3em;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border-bottom: 5px solid rgba(255, 217, 0, 0.486);
+    padding: 10px;
+    animation: slideUp 1.6s ease forwards;
+}
+
+@keyframes slideUp{
+    0%{}
+    70%{transform: translateY(-5px)}
+    100%{transform: translateY(0)}
+
+}
+
+.news-boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 150px;
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(239, 226, 226, 0.5);
+    margin-top: 5vh;
+    
+}
+
+.news-box{
+    height: 0;
+    width: 0;
+    animation: show1 1s ease forwards; 
+}
+
+@keyframes show1{
+    0%{}
+    100%{height: 250px; width: 250px;}
+}
+
+.news-box a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    border: 20px solid white;
+    box-shadow: 3px 8px 16px 3px rgba(0, 0, 0, 0.2), 3px 12px 40px 3px rgba(0, 0, 0, 0.19);
+} 
+
+
+#news1{        
+    background-image: url("../SUPIT-projekt-materijali/img/novost1.jpg");
+}
+#news2{
+    background-image: url("../SUPIT-projekt-materijali/img/novost2.jpg");
+}
+#news3{
+    background-image: url("../SUPIT-projekt-materijali/img/novost3.jpg");
+}
+
+#text, #date{
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    opacity: 0;
+    animation: show2 0.8s 1s ease forwards; 
+} 
+
+@keyframes show2{
+    0%{}
+    100%{opacity: 1}
+}
+
+#date{
+    color: yellow;
+}
+
+
+.footer{
+    background-image: url("../SUPIT-projekt-materijali/img/zaiskri-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-position-y: -200px;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-weight: 750;    
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.footer #white{
+    font-size: 3.1em;
+    color: white;
+    opacity: 20;
+}
+
+.footer #zaiskri{
+    font-size: 3em;
+    color: rgba(204, 7, 46, 0.993);
+}
+
+
+@media(max-width: 1200px){
+
+    .news-boxes{
+        column-gap: 130px;
+    }
+
+    .news-box{
+        height: 0;
+        width: 0;
+        animation: show1 1s ease forwards; 
+    }
+    
+    #text, #date{
+        font-size: 0.9em;
+    }
+
+    @keyframes show1{
+        0%{}
+        100%{height: 200px; width: 200px;}
+    }   
+}
+
+
+@media(max-width: 1000px){
+    .footer{
+        background-position-y: -100px;
+    }
+
+    .footer #white{
+        font-size: 2.9em;
+    }
+    .footer #zaiskri{
+        font-size: 2.8em;
+    }
+    
+}
+
+@media(max-width: 950px){
+    .news-boxes{
+        column-gap: 110px;
+    }
+
+    .news-box{
+        height: 0;
+        width: 0;
+        animation: show1 1s ease forwards; 
+    }
+    
+    #text, #date{
+        font-size: 0.8em;
+    }
+    
+    @keyframes show1{
+        0%{}
+        100%{height: 170px; width: 170px;}
+    }
+    
+    .footer #white{
+        font-size: 2.7em;
+    }
+    .footer #zaiskri{
+        font-size: 2.6em;
+    }
+
+}
+
+@media(max-width: 800px){
+    .footer{
+        background-position-y: 0px;
+    }
+    .news-boxes{
+        column-gap: 90px;
+    }
+    .footer #white{
+        font-size: 2.5em;
+    }
+    .footer #zaiskri{
+        font-size: 2.4em;
+    }
+}
+
+@media(max-width: 750px){
+    .footer{
+        background-position-y: 0px;
+    }
+    .news-boxes{
+        column-gap: 70px;
+    }
+    .footer #white{
+        font-size: 2.3em;
+    }
+    .footer #zaiskri{
+        font-size: 2.2em;
+    }
+
+}
+
+@media(max-width: 700px){    
+    .news-boxes{
+        height: 100vh;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    
+}

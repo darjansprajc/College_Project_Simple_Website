@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="common.css">
+    <script src="https://kit.fontawesome.com/156e0aa52b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <video autoplay muted loop class="backgroundVideo">
+        <source src="../SUPIT-projekt-materijali/video/typingOnlaptop.mp4" type="video/mp4">
+    </video>
+    
+    <div id="openMenu"><i onclick = "openMenu()" class="fa-solid fa-bars fa-xl" style="color: rgb(46, 43, 43);"></i></div>
+    <div class="nav">
+        <i id="closeMenu" onclick = "closeMenu()" class="fa-solid fa-x fa-lg" style="color: #ff3d3d;"></i>
+        <ul id="id1">
+                <li id = "navPrijaviSe"><a href="/LoginRegistration/login.html"><i class="fa-solid fa-right-to-bracket" style="color:lightblue"></i> Prijavi se</a></li>
+                <li><a href="/"><i class="fa-solid fa-house" style="color:yellow"></i> Početna</a></li>
+                <li><a href="aboutUs/aboutUs.html"><i class="fa-solid fa-comments" style="color:yellow"></i> O nama</a></li>
+                <li><a href="news/news.html"><i class="fa-solid fa-circle-info" style="color:yellow"></i> Novosti</a></li>
+                <li id = "navNastavniPlan"><a href="CoursePlan/coursePlan.html"><i class="fa-solid fa-circle-info" style="color:yellow"></i> Nastavni Plan</a></li>
+                <li><a onclick = "openForm()" style="cursor: pointer;"><i class="fa-solid fa-envelope" style="color:yellow"></i> Kontakt</a></li>
+        </ul>  
+    </div>
+
+    <div class="form" id="myForm">
+        <div class="form-box" >
+            <h1><div><i class="fa-solid fa-envelope"></i> Kontaktirajte nas </div><img src="SUPIT-projekt-materijali/img/Algebra-logo.png"> </h1>
+            <form action="https://www.fulek.com/mvc/supit/project-contact-form" method = "post" class="form-container">
+
+                <label for="FullName">Puno Ime</label>
+                <input type="text" name="FullName" required>
+            
+                <label for="Email">Email</label>
+                <input type="email" name="Email" required>
+
+                <label for="Importance">Važnost poruke</label> 
+                <select name="Importance" id="importance"> 
+                    <option value="visoka">Visoka</option> 
+                    <option value="niska">Niska</option>
+                </select>
+                
+                <label for="Message">Poruka</label>
+                <textarea id="message" name="Message" rows="10" cols="20"></textarea>
+
+                <label id="newsLetter"for="ReceiveNewsletter">Želim primati obavijesti <input type="checkbox" name="ReceiveNewsletter" value="true"></label>
+                
+                <div class="buttons">
+                    <button id="submitButton" type="submit">Pošalji</button>
+                    <button id="cancelButton"type="button" onclick="closeForm()">Odustani</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+    <div class="front-text">
+        Budi izvrstan u onom što <span id="lastWord">vidiš.</span><span id="zaiskri"><br>ZAISKRI!</span>
+    </div>
+     
+    
+    <script>
+        const lastText = document.getElementById('lastWord');
+
+        setTimeout(() => {
+            lastText.innerHTML = 'voliš!';
+        }, 4500);
+
+        const frontText = document.getElementsByClassName('front-text')[0];
+        const zaiskri = document.getElementById('zaiskri');
+        setTimeout(() => {
+            frontText.style.borderRight = "none";
+            zaiskri.style.display = "contents";
+        }, 5500);
+
+    </script>
+
+   <script src="index.js"></script>
+
+</body>
+</html>

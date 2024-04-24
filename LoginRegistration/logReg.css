@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.footer{
+    background-image: url("../SUPIT-projekt-materijali/img/zaiskri-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-position-y: -200px;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-weight: 750;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.footer #white{
+    font-size: 3.1em;
+    color: white;
+    opacity: 20;
+}
+
+.footer #zaiskri{
+    font-size: 3em;
+    color: rgba(204, 7, 46, 0.993);
+}
+
+.center-box{
+    height: 66vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.center-box h2{
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: darkblue;
+}
+
+.center-box form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    row-gap: 10px;
+    width: 350px;
+}
+
+.center-box form input{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.center-box form input:focus{
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 0px 2px 2px rgba(0, 128, 255, 0.362);
+}
+
+.center-box form button{
+    text-align:center;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 139, 0.91);
+    color: white;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.center-box form button:hover{
+    cursor: pointer;
+}
+
+.center-box form label{
+    font-weight: 500;
+}
+
+.center-box #registerLink{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media(max-width:1400px){
+    .footer{
+        background-position-y: -100px;
+    }
+}
+
+@media(max-width:900px){
+    .footer{
+        background-position-y: 0px;
+    }
+    .footer #white{
+        font-size: 2.3em;
+    }
+    
+    .footer #zaiskri{
+        font-size: 2.2em;
+    }
+}

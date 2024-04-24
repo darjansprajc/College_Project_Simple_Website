@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldSkills Kazan</title>
+    <link rel="stylesheet" href="newsPages.css">
+    <link rel="stylesheet" href="../common.css">
+    <script src="https://kit.fontawesome.com/156e0aa52b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css">
+</head>
+<body>
+    <div id="openMenu"><i onclick = "openMenu()" class="fa-solid fa-bars fa-xl" style="color: rgb(46, 43, 43);"></i></div>
+    <div class="nav">
+        <i id="closeMenu" onclick = "closeMenu()" class="fa-solid fa-x fa-lg" style="color: #ff3d3d;"></i>
+        <ul id="id1">
+                <li id="navPrijaviSe"><a href="../LoginRegistration/login.html"><i class="fa-solid fa-right-to-bracket" style="color:lightblue"></i> Prijavi se</a></li>
+                <li><a href="../index.html"><i class="fa-solid fa-house" style="color:yellow"></i> Početna</a></li>
+                <li><a href="../aboutUs/aboutUs.html"><i class="fa-solid fa-comments" style="color:yellow"></i> O nama</a></li>
+                <li><a href="../news/news.html"><i class="fa-solid fa-circle-info" style="color:yellow"></i> Novosti</a></li>
+                <li id = "navNastavniPlan"><a href="../CoursePlan/coursePlan.html"><i class="fa-solid fa-circle-info" style="color:yellow"></i> Nastavni Plan</a></li>
+                <li><a onclick = "openForm()" style="cursor: pointer;"><i class="fa-solid fa-envelope" style="color:yellow"></i> Kontakt</a></li>
+        </ul>  
+    </div> 
+
+    <div class="form" id="myForm">
+        <div class="form-box" >
+            <h1><div><i class="fa-solid fa-envelope"></i> Kontaktirajte nas </div><img src="../SUPIT-projekt-materijali/img/Algebra-logo.png"> </h1>
+            <form action="https://www.fulek.com/mvc/supit/project-contact-form" method = "post"class="form-container">
+
+                <label for="FullName">Puno Ime</label>
+                <input type="text" name="FullName" required>
+            
+                <label for="Email">Email</label>
+                <input type="email" name="Email" required>
+
+                <label for="Importance">Važnost poruke</label> 
+                <select name="Importance" id="importance"> 
+                    <option value="visoka">Visoka</option> 
+                    <option value="niska">Niska</option>
+                </select>
+                
+                <label for="Message">Poruka</label>
+                <textarea id="message" name="Message" rows="10" cols="20"></textarea>
+
+                <label id="newsLetter"for="ReceiveNewsletter">Želim primati obavijesti <input type="checkbox" name="ReceiveNewsletter" value="true"></label>
+                
+                <div class="buttons">
+                    <button id="submitButton" type="submit">Pošalji</button>
+                    <button id="cancelButton"type="button" onclick="closeForm()">Odustani</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="img-text">
+       <img src="../SUPIT-projekt-materijali/img/novost1.jpg">
+        <div>
+            Student Josip Stanešić 12. je sistemaš svijeta i dobitnik medalje izvrsnosti.
+        </div>     
+    </div>
+    
+    <h1 class="h1">WorldSkills natjecanje - Kazan 2019</h1>
+
+    <div class="grey-text">
+        Nakon godinu dana priprema za natjecanje WorldSkills
+        Kazan 2019 na kojem je sudjelovalo 1300 natjecatelja iz
+        cijelog svijeta, trud se itekako isplatio. Josip,
+        student 3. godine preddiplomskog studija sistemskog
+        inženjerstva osvojio je 12. mjesto u vještini IT
+        Networks and System Administration te osvojio medalju
+        izvrsnosti! Čestitke Josipu ali i njegovim/našim
+        mentorima koji su ga pripremali za ovo natjecanje –
+        voditelju studija sistemskog inženjerstva Silviju
+        Papiću, voditelju katedre za operacijske sustave –
+        Vedranu Dakiću i asistentu na studiju sistemskog
+        inženjerstva – Jasminu Redžepagiću. Čestitke i našem
+        studentu 3.godine preddiplomskog studija programskog
+        inženjerstva Josipu Horvatu i mentoru voditelju katedre
+        za programsko inženjerstvo - Goranu Đambiću na osvojenom
+        16.mjestu u vještini IT Software Solutions for Business.
+    </div>
+
+    <div class="gallery">
+        <a href="../SUPIT-projekt-materijali/img/galerija1.jpg" data-lightbox="gallery"><img src="../SUPIT-projekt-materijali/img/galerija1.jpg" alt=""></a> 
+    
+        <a href="../SUPIT-projekt-materijali/img/galerija2.jpg" data-lightbox="gallery"><img src="../SUPIT-projekt-materijali/img/galerija2.jpg" alt=""></a> 
+
+    </div>
+
+    <div class="vid-container">
+        <video controls>
+            <source src="../SUPIT-projekt-materijali/video/worldskills.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+
+    <div class="footer">
+        <div id="white">BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</div>
+        <div id="zaiskri">ZAISKRI</div>
+    </div> 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    
+   <script src="../index.js"></script>
+</body>
+</html>
